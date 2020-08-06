@@ -4,7 +4,8 @@
 
 html,
 body {
-	margin: 0 auto;
+	margin: 0;
+	padding: 0;
 	background-color: #eee;
 	display: flex;
 	justify-content: center;
@@ -14,9 +15,9 @@ body {
 	display: grid;
 	grid-template-rows: repeat(100, 1fr);
 	grid-column-gap: 5px;
-	height: 96vh;
+	height: 84vh;
 	min-width: 90vw;
-	padding: 5px 10px;
+	padding: 0 10px;
 	text-align: center;
 }
 
@@ -30,7 +31,7 @@ body {
 
 [class*="bar"] {
 	border-radius: 5px 5px 0 0;
-	transition: all .6s ease;
+	transition: all .05s ease;
 	background-color: #ff4136;
 	grid-row-start: 1;
 	grid-row-end: 101;
@@ -47,4 +48,8 @@ $totalRows: 100;
 	.bar-#{$i} {
 		@include chartValue($i);
 	}
+}
+
+.animation-speed {
+	direction: rtl;
 }
